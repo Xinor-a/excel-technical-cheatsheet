@@ -7,7 +7,7 @@
 <details><summary><b>COUNT_CONSECUATIVE_NON_BLANKS_ROW</b></summary>
   
   ```excel
-  =LAMBDA(start,LET(r,DROP(INDEX(A:XFD,,COLUMN(start)),ROW(start)-1),IFERROR(XMATCH(TRUE,r="")-1,ROWS(r))))
+  =LAMBDA(start,LET(r,DROP(INDEX($1:$1048576,,COLUMN(start)),ROW(start)-1),IFERROR(XMATCH(TRUE,r="")-1,ROWS(r))))
   ```
 
 </details>
@@ -15,7 +15,7 @@
 <details><summary><b>COUNT_CONSECUATIVE_NON_BLANKS_COLUMN</b></summary>
   
   ```excel
-  =LAMBDA(start,LET(r,DROP(INDEX(5:5,,COLUMN(start)),,COLUMN(start)-1),IFERROR(XMATCH(TRUE,r="")-1,COLUMNS(r))))
+  =LAMBDA(start,LET(r,DROP(INDEX($1:$1048576,ROW(start),0),,COLUMN(start)-1),IFERROR(XMATCH(TRUE,r="")-1,COLUMNS(r))))
   ```
 
 </details> 
